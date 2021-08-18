@@ -1,15 +1,15 @@
 {
     "train_config": {
-        "fp16_run": true,
-        "output_directory": "checkpoints",
+        "fp16_run": false,
+        "output_directory": "/content/drive/MyDrive/waveglow_checkpoints_1.2",
         "epochs": 100000,
         "learning_rate": 1e-4,
         "sigma": 1.0,
-        "iters_per_checkpoint": 2000,
+        "iters_per_checkpoint": 5000,
         "batch_size": 12,
         "seed": 1234,
         "checkpoint_path": "",
-        "with_tensorboard": false
+        "with_tensorboard": true
     },
     "data_config": {
         "training_files": "train_files.txt",
@@ -18,8 +18,8 @@
         "filter_length": 1024,
         "hop_length": 256,
         "win_length": 1024,
-        "mel_fmin": 0.0,
-        "mel_fmax": 8000.0
+        "mel_fmin": 60.0,
+        "mel_fmax": 7600.0
     },
     "dist_config": {
         "dist_backend": "nccl",
